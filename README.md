@@ -1,4 +1,4 @@
-# cmmn-clj (適応型ケース管理)
+# kotoba-lang/cmmn
 
 [![CI](https://github.com/kotoba-lang/cmmn/actions/workflows/ci.yml/badge.svg)](https://github.com/kotoba-lang/cmmn/actions/workflows/ci.yml)
 
@@ -9,16 +9,14 @@ ClojureScript, and Clojure-on-WASM hosts (SCI). A case is plain data you can
 structural validation, and a pure sentry-driven interpreter around it.
 
 Completes the **OMG process-standards trio** alongside
-[bpmn-clj](https://github.com/com-junkawasaki/bpmn-clj) (structured flow processes) and
-[dmn-clj](https://github.com/com-junkawasaki/dmn-clj) (decision tables) in this org.
+[`kotoba-lang/bpmn`](https://github.com/kotoba-lang/bpmn) (structured flow
+processes) and [`kotoba-lang/dmn`](https://github.com/kotoba-lang/dmn)
+(decision tables).
 
-## Why a shared library (org placement)
+## Why a shared library
 
-Per the three-org rule, the **reusable** case model lives in **com-junkawasaki**;
-**public-benefit actor instances** that drive concrete case workflows live in
-**etzhayyim**; any **business/private deployment** lives in **gftdcojp**. cmmn-clj is
-the dep — it carries no domain process and no engine bindings (those are
-host-injected ports).
+The reusable case model lives in `kotoba-lang/cmmn`. It carries no domain
+process and no engine bindings; those remain host-injected ports.
 
 ## The model: CMMN as EDN (`cmmn.model`)
 
@@ -100,5 +98,5 @@ items whose entry-criteria are all satisfied. Milestones auto-complete on activa
 ## Test
 
 ```
-clojure -X:test
+clojure -M:test
 ```
